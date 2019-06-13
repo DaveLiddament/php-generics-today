@@ -12,7 +12,6 @@ Contents:
 - [Generics](#generics)
 - [Extra type](#extra-types)
 - [Assertions](#assertions)
-- [Extra annotations](#extra-annotations)
 - [Stubs](#stubs)
 
 
@@ -364,7 +363,20 @@ $person = build(Person::class); // $person is of type Person
 Although not technically part of generics assertions will probably be required in order to give the static analyser 
 information it might not otherwise be able to infer. 
 
-E.g. 
+Consider the following code. The `@psalm-assert` is a message to Psalm to tell it that if the function exits `$value` can not be null.
+
+```php
+/**
+ * @psalm-assert !null $value
+ */
+function assertNotNull($value): void { ... }
+
+assertNotNull($value); 
+
+$value // Psalm knows that value is not null at this point.
+```
+
+** TODO ** Pad out with more examples
 
 
 
