@@ -1,5 +1,7 @@
 # PHP generics support
 
+**NOTE:** This is currently very much work in progress.
+
 Many PHP developers would like generics supported by the language. 
 Adding native support is non trivial and we might have to wait some time before it becomes part of the language.
 
@@ -23,7 +25,7 @@ For a more indepth discussion of the above read [PHP Generics today (almost)][ht
 
 ## Goals 
 
-THe purpose of this repo is to act as a central point to start the discussion around the steps required to get 
+The purpose of this repo is to act as a central point to start the discussion around the steps required to get 
 static analysis supported generics mainstream to those who want it.
 
 The steps required are:
